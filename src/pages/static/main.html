@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Динамически меняющийся фон</title>
+    <link rel="stylesheet" href="http://127.0.0.1:8000/static/styles.css">
+</head>
+<body>
+    <div id="background" class="fact__theme">
+        <div id="stars"></div>
+        <div id="clouds">
+            <svg class="cloud" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
+                <path d="M50,10 Q60,0 70,10 Q80,0 90,10 Q100,0 110,10 Q120,0 130,10 Q140,0 150,10 Q160,0 170,10 Q180,0 190,10 Q200,0 210,10" fill="#fff" />
+            </svg>
+            <svg class="cloud" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" style="transform: translateX(50px)">
+                <path d="M50,10 Q60,0 70,10 Q80,0 90,10 Q100,0 110,10 Q120,0 130,10 Q140,0 150,10 Q160,0 170,10 Q180,0 190,10 Q200,0 210,10" fill="#fff" />
+            </svg>
+            <svg class="cloud" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" style="transform: translateX(100px)">
+                <path d="M50,10 Q60,0 70,10 Q80,0 90,10 Q100,0 110,10 Q120,0 130,10 Q140,0 150,10 Q160,0 170,10 Q180,0 190,10 Q200,0 210,10" fill="#fff" />
+            </svg>
+        </div>
+    </div>
+</body>
+<script src="http://127.0.0.1:8000/static/scripts.js"></script>
+</html>
