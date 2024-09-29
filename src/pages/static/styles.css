@@ -1,107 +1,119 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+body {
+    background: #e6e6e6;
+    font-family: "Montserrat", sans-serif;
+    margin: 20px;
 }
 
-#background {
-    width: 100%;
-    height: 100vh;
-    transition: background-image 1s ease-in-out;
-    background-size: cover;
-    background-position: center;
+.city {
+    text-align: center;
+    font-size: 30px;
+}
+
+.temperature {
+    font-size: 40px;
+    margin-right: 10px;
+    align-items: center;
+}
+
+.weather_data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.temperature_and_icon {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.5fr;
+    align-items: center;
+}
+
+.additional_data {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+}
+
+.additional_data p{
+      display: inline-block;
+      margin: 0;
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.today-weather, .weekly-weather {
+    margin-bottom: 20px;
+}
+
+.weekly-weather-container {
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    border-radius: 12px;
+    background-color: #ffffff;
     position: relative;
+    padding: 16px;
+
 }
 
-#stars, #clouds {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+.scrolling-container {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    transition: scroll-behavior 0.5s ease-in-out;
+}
+
+.scrolling-container::-webkit-scrollbar {
+  display: none;
+}
+
+.day-weather {
+    min-width: 150px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    /*pointer-events: none;*/
+    transition: transform 0.2s ease-in-out;
+
+}
+
+
+.day-weather img{
     pointer-events: none;
 }
 
-#stars {
-    display: none;
-    background: transparent;
+.day-weather:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-#stars::before, #stars::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    box-shadow: 0 0 2px 2px white, 0 0 4px 4px white, 0 0 6px 6px white;
-    animation: twinkling 2s infinite alternate;
+
+.weekly-weather-container:active .day-weather:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-#clouds {
-    display: block;
-    background: transparent;
+.level_2 {
+    display: inline-block;
+    margin: 0 12px 0 0;
+    vertical-align: middle;
 }
 
-.cloud {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    animation: moveClouds 20s linear infinite;
-}
 
-.cloud:nth-child(1) {
-    left: 0;
-}
-
-.cloud:nth-child(2) {
-    left: 50px;
-}
-
-.cloud:nth-child(3) {
-    left: 100px;
-}
-
-@keyframes twinkling {
-    0% { opacity: 0.5; }
-    100% { opacity: 1; }
-}
-
-@keyframes moveClouds {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(100vw); }
-}
-
-.fact__theme_day-clear {
-    background-image: linear-gradient(to bottom, #4c90f4, #3e9eee);
-}
-
-.fact__theme_day-cloudy {
-    background-image: linear-gradient(to bottom, #4a72ac, #438dcb);
-}
-
-.fact__theme_day-rain {
-    background-image: linear-gradient(to bottom, #5a5a5a, #3a3a3a);
-}
-
-.fact__theme_day-snow {
-    background-image: linear-gradient(to bottom, #ffffff, #e0e0e0);
-}
-
-.fact__theme_night-clear {
-    background-image: linear-gradient(to bottom, #2e4686, #375382);
-}
-
-.fact__theme_night-cloudy {
-    background-image: linear-gradient(to bottom, #162a62, #16315f);
-}
-
-.fact__theme_night-rain {
-    background-image: linear-gradient(to bottom, #2b2b2b, #1a1a1a);
-}
-
-.fact__theme_night-snow {
-    background-image: linear-gradient(to bottom, #d9d9d9, #bfbfbf);
+.weather_visual {
+    font-size: 15px;
+    line-height: 1.2
 }
