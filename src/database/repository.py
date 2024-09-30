@@ -1,8 +1,9 @@
 from dataclasses import dataclass, asdict
+
 from src.database.redis.cache import Redis
 from src.entities import IpEntity, DailyAndWeeklyWeather, Weather
-from src.weather.repository import WeatherRepository
 from src.ip.repository import IpRepository
+from src.weather.repository import WeatherRepository
 
 
 @dataclass

@@ -281,7 +281,6 @@ WEATHER_IMAGES = {
     },
 }
 
-
 SHORT_RUSSIAN_WEEKDAYS = {
     "Monday": "Пн",
     "Tuesday": "Вт",

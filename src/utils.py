@@ -8,7 +8,6 @@ from starlette.status import HTTP_451_UNAVAILABLE_FOR_LEGAL_REASONS
 from src.container import get_container
 from src.database.redis.cache import Redis
 from src.database.repository import ICacheRepository
-
 from src.entities import IpEntity
 from src.exceptions import CannotGetIpDataError, IpNotFromRussiaError
 from src.ip.repository import IpRepository

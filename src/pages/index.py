@@ -11,8 +11,8 @@ from src.pages import templates
 from src.utils import get_redis_database, validate_request_country
 from src.weather.repository import WeatherRepository
 
-
 router = APIRouter()
+
 
 @router.get("/")
 async def root(
@@ -42,7 +42,9 @@ async def root(
                 else "Сегодня",
                 "temperature": day.temperature,
                 "weather_icon": WEATHER_IMAGES[str(day.weather_code)]["day"]["image"],
-                "description": WEATHER_IMAGES[str(day.weather_code)]["day"]["description"],
+                "description": WEATHER_IMAGES[str(day.weather_code)]["day"][
+                    "description"
+                ],
             }
             for day in weather_data.weekly
         )

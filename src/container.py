@@ -1,5 +1,6 @@
-import punq
 from functools import lru_cache
+
+import punq
 
 from src.database.redis.cache import Redis
 from src.http.client import HttpClient
