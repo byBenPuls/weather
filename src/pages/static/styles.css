@@ -29,14 +29,14 @@ body {
 }
 
 .additional_data {
-      display: flex;
-      align-items: center;
-      gap: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-.additional_data p{
-      display: inline-block;
-      margin: 0;
+.additional_data p {
+    display: inline-block;
+    margin: 0;
 }
 
 
@@ -63,13 +63,13 @@ body {
     display: flex;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
     transition: scroll-behavior 0.5s ease-in-out;
 }
 
 .scrolling-container::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 .day-weather {
@@ -86,11 +86,10 @@ body {
     -ms-user-select: none;
     /*pointer-events: none;*/
     transition: transform 0.2s ease-in-out;
-
 }
 
 
-.day-weather img{
+.day-weather img {
     pointer-events: none;
 }
 
