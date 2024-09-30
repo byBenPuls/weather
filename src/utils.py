@@ -16,13 +16,10 @@ from src.ip.validator import IPValidator
 
 
 async def validate_request_country(request: Request) -> IpEntity:
-    print("work")
-    request.headers.get("X-Real-IP")
     try:
         ip = await ICacheRepository(get_redis_database(), IpRepository()).get_ip_data(
-            request.client.host
+            request.headers.get("X-Real-IP")
         )
-        print(ip)
         validator = await IPValidator(ip).validate_ip_address()
         return validator
     except (CannotGetIpDataError, IpNotFromRussiaError, HTTPStatusError) as e:
