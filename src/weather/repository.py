@@ -1,3 +1,8 @@
+"""
+Here you can get meteo data from any source.
+This could be your weather station, some weather service.
+"""
+
 import datetime
 from urllib.parse import urlencode
 
