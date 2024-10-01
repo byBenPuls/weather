@@ -8,15 +8,11 @@ class RedisSettings(BaseSettings):
     REDIS_PASSWORD: str
 
 
-class OpenWeatherSettings(BaseSettings):
-    OPENWEATHER_API_KEY: str
-
-
 class IpSettings(BaseSettings):
     IP_API_KEY: str
 
 
-class Settings(RedisSettings, OpenWeatherSettings, IpSettings):
+class Settings(RedisSettings, IpSettings):
     class Config:
         env_file = ".env"
         env_file_encoding = "utf-8"
